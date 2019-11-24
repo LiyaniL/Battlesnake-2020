@@ -2,6 +2,7 @@ import json
 import os
 import random
 import bottle
+import node
 
 from api import ping_response, start_response, move_response, end_response
 
@@ -55,6 +56,9 @@ def move():
             snake AI must choose a direction to move in.
     """
     # print(json.dumps(data))
+    print(json.dumps(data, indent=4, sort_keys=True))
+    grid = node.createGrid(data)
+    print(grid)
 
     directions = ['up', 'down', 'left', 'right']
     direction = random.choice(directions)
