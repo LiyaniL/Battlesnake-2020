@@ -16,6 +16,7 @@ class Node():
 
 def aStar(grid, start, end):
     # Returns a list of tuples as a path from the given start to the given end in the given grid #
+    print("length of the grid is: ", len(grid) )
 
     # Create start and end node #
     start_node = Node(None, start)
